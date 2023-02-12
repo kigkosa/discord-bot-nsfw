@@ -10,7 +10,11 @@ module.exports = (client) => {
             }
             if(msg.guild.members.cache.get(msg.author.id).roles.cache.has("1051086920169570404")){
                 if (msg.content != ""){
-                    msg.channel.send(msg.content)
+                    msg.channel.send(msg.content).then((message)=>{
+                        message.react("👍")
+                        message.react("👎")
+                    });
+                    
                 }
         
             }
