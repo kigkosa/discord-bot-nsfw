@@ -31,6 +31,7 @@ module.exports = {
                 channel.members.map(member =>{
                     member.voice.setChannel(toChannel);
                 });
+                client.channels.cache.get('995492978464411748').send( interaction.member.user.tag+' MOVE '+voice_channel_id+" TO "+interaction.options.getString("to"));
                 return await interaction.reply({ content: 'สำเร็จ', ephemeral: true });
             } else {
                 return await interaction.reply({ content: 'Channel is not a voice channel.', ephemeral: true });
