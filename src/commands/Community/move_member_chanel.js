@@ -12,10 +12,11 @@ module.exports = {
     async execute(interaction, client) {
 
         if (interaction.commandName === 'move_member_chanel') {
-            let flag = `MODERATOR`;
-            if (!interaction.member.permissions.has(flag)) {
+
+       
+            if (!interaction.member.roles.cache.has('872810186765656064')) {
                 return await interaction.reply({
-                    content: `You Don't Have The Permisssion To Execute this command, must have the following permission: **${flag}**`,
+                    content: `You Don't Have The Permisssion`,
                     ephemeral: true
                 });
             }
