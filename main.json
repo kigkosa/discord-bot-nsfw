@@ -3,7 +3,7 @@
         "name": "BOT DISCORD NSFW",
         "script": "src/index.js",
         "autorestart": true,
-        "watch": true,
+        "watch": false,
         "ignore_watch" : ["logs", "node_modules"],
         "interpreter" : "node",
         "out_file": "logs/POLYGON.out.log"
